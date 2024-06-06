@@ -1,0 +1,328 @@
+/* Loginform=================================================================== */
+.logbody{
+    overflow: hidden;
+}
+
+.loginform{
+    background-color: var(--bg-black-900);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+}
+
+.loginform::before{
+    z-index: 6;
+    content: '';
+    position: absolute;
+    width: 3000px;
+    height: 3000px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background: linear-gradient(-45deg, var(--skin--color1),var(--skin--color2));
+    top: -10%;
+    right: 48%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transition: ease-in-out 1.8s;
+    -webkit-transition: ease-in-out 1.8s;
+    -moz-transition: ease-in-out 1.8s;
+    -ms-transition: ease-in-out 1.8s;
+    -o-transition: ease-in-out 1.8s;
+}
+
+
+.input-field{
+    border-radius: 55px;
+    grid-template-columns: 15% 85%;
+    -webkit-border-radius: 55px;
+    -moz-border-radius: 55px;
+    -ms-border-radius: 55px;
+    -o-border-radius: 55px;
+    background-color: var(--bg-black-50);
+    transition: .3s ease-in-out;
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -ms-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+}
+
+
+.loginform form button{
+     background-color: var(--skin--color1);
+}
+
+.loginform form button:hover{
+    background-color: var(--skin--color2);
+    transition: .3s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+}
+
+.loginform form{
+    padding: 0 5rem;
+    overflow: hidden;
+    grid-column: 1 / 2;
+    grid-row: 1/2;
+    transition: 0.2s 0.7s ease-in-out;
+    -webkit-transition: 0.2s 0.7s ease-in-out;
+    -moz-transition: 0.2s 0.7s ease-in-out;
+    -ms-transition: 0.2s 0.7s ease-in-out;
+    -o-transition: 0.2s 0.7s ease-in-out;
+}
+
+.signin-signup{
+    z-index: 5;
+    transition: 1s 0.7s ease-in-out;
+    -webkit-transition: 1s 0.7s ease-in-out;
+    -moz-transition: 1s 0.7s ease-in-out;
+    -ms-transition: 1s 0.7s ease-in-out;
+    -o-transition: 1s 0.7s ease-in-out;
+}
+
+.sign-in-form{
+    z-index: 2;
+}
+
+.sign-up-form{
+    z-index: 1;
+    opacity: 0;
+}
+
+.panel{
+    z-index: 7;
+}
+.content{
+    transition: .9s .6s ease-in-out;
+    -webkit-transition: .9s .6s ease-in-out;
+    -moz-transition: .9s .6s ease-in-out;
+    -ms-transition: .9s .6s ease-in-out;
+    -o-transition: .9s .6s ease-in-out;
+}
+.image{
+transition: .9s .6s ease-in-out;
+    -webkit-transition: .9s .6s ease-in-out;
+    -moz-transition: .9s .6s ease-in-out;
+    -ms-transition: .9s .6s ease-in-out;
+    -o-transition: .9s .6s ease-in-out;
+}
+
+.left-panel{
+    pointer-events: all;
+    padding: 3rem 17% 2rem 12%;
+}
+
+.right-panel{
+    pointer-events: none;
+    padding: 3rem 12% 2rem 17%;
+}
+
+.right-panel .content,.right-panel .image{
+    transform: translateX(800px);
+    -webkit-transform: translateX(800px);
+    -moz-transform: translateX(800px);
+    -ms-transform: translateX(800px);
+    -o-transform: translateX(800px);
+}
+
+.loginform.signupmode::before{
+    transform:translate(100%,-50%) ;
+    -webkit-transform:translate(100%,-50%) ;
+    -moz-transform:translate(100%,-50%) ;
+    -ms-transform:translate(100%,-50%) ;
+    -o-transform:translate(100%,-50%) ;
+    right: 52%;
+}
+
+.loginform.signupmode .left-panel .image,
+.loginform.signupmode .left-panel .content {
+    transform: translateX(-800px);
+    -webkit-transform: translateX(-800px);
+    -moz-transform: translateX(-800px);
+    -ms-transform: translateX(-800px);
+    -o-transform: translateX(-800px);
+}
+
+
+.loginform.signupmode .right-panel .image,
+.loginform.signupmode .right-panel .content {
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+}
+
+.loginform.signupmode .left-panel{
+    pointer-events: none;
+}
+
+.loginform.signupmode .right-panel{
+    pointer-events: all;
+}
+
+.loginform.signupmode .signin-signup{
+    left:25% ;
+}
+
+.loginform.signupmode .sign-in-form{
+    z-index: 1;
+    opacity: 0;
+}
+
+.loginform.signupmode .sign-up-form{
+    z-index: 2;
+    opacity: 1;
+
+}
+
+@media (max-width:768px) {
+    .loginform{
+        max-height: 800px;
+    }
+    .signin-signup{
+        top: 130%;
+    }
+
+    .panel{
+        padding: 2.5rem 8%;
+    }
+    
+    .loginform::before{
+    width: 1500px ;
+    height: 1500px;
+    left: 30%;
+    bottom: 72%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    right: initial;
+    top: initial;
+    transition:2s ease-in-out ;
+    -webkit-transition:2s ease-in-out ;
+    -moz-transition:2s ease-in-out ;
+    -ms-transition:2s ease-in-out ;
+    -o-transition:2s ease-in-out ;
+}
+    .panels-container{
+        z-index: 10;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+
+    .left-panel{
+        grid-row: 1/2;
+    }
+    .right-panel{
+        grid-row: 3/4;
+    }
+
+    .right-panel .content,.right-panel .image{
+        transform: translateY(300px);
+        -webkit-transform: translateY(300px);
+        -moz-transform: translateY(300px);
+        -ms-transform: translateY(300px);
+        -o-transform: translateY(300px);
+    }
+    .loginform.signupmode::before{
+        transform:translate(-50%,100%) ;
+        -webkit-transform:translate(-50%,100%) ;
+        -moz-transform:translate(-50%,100%) ;
+        -ms-transform:translate(-50%,100%) ;
+        -o-transform:translate(-50%,100%) ;
+        right: initial;
+        bottom: 28%;
+    }
+    .loginform.signupmode .left-panel .image,
+    .loginform.signupmode .left-panel .content {
+        transform: translateY(-300px);
+        -webkit-transform: translateY(-300px);
+        -moz-transform: translateY(-300px);
+        -ms-transform: translateY(-300px);
+        -o-transform: translateY(-300px);
+}
+
+
+    .loginform.signupmode .right-panel .image,
+    .loginform.signupmode .right-panel .content {
+        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        -o-transform: translateX(0px);
+    }
+
+
+    .loginform.signupmode .signin-signup{
+        top: -40%;
+        transform: translate(-50%,0);
+        -webkit-transform: translate(-50%,0);
+        -moz-transform: translate(-50%,0);
+        -ms-transform: translate(-50%,0);
+        -o-transform: translate(-50%,0);
+        left: 50%;
+}
+} 
+
+
+@media (max-width:570px) {
+    .image{ 
+        display: none;
+    }
+    .panel .content{
+        padding: .1rem 1rem;
+        margin: 0;
+    }
+
+    .sign-in-form{
+        transform: translateY(150px);
+        -webkit-transform: translateY(150px);
+        -moz-transform: translateY(150px);
+        -ms-transform: translateY(150px);
+        -o-transform: translateY(150px);
+}
+
+    .sign-up-form{
+        transform: translateY(-60px);
+        -webkit-transform: translateY(-60px);
+        -moz-transform: translateY(-60px);
+        -ms-transform: translateY(-60px);
+        -o-transform: translateY(-60px);
+}
+
+    .loginform::before{
+        bottom: 72%;
+        left: 50%;
+    }
+
+    .loginform.signupmode::before{
+        bottom: 28%;
+        left: 50%;
+    }
+
+    .content button{
+        display: block;
+        margin: auto;
+        border: 2px solid ;
+    }
+} 
+
+.signbtn{
+    border: 2px solid var(--bg-black-900);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+/* end login form=============================================================== */

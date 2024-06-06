@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../../public/css/dist/style.css">
+    <link rel="stylesheet" href="../../public/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../public/css/fontawesome-free-6.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="../../public/css/style-switcher.css">
+
+    <link rel="stylesheet" href="../../public/css/theme/bleu.css" class="alternate-style" title="bleu" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/emit.css" class="alternate-style" title="emit" enable>
+    <link rel="stylesheet" href="../../public/css/theme/orange.css" class="alternate-style" title="orange" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/rose.css" class="alternate-style" title="rose" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/rouge.css" class="alternate-style" title="rouge" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/vert.css" class="alternate-style" title="vert" disabled>
+
+    <script src="../../Public/js/app.js" defer></script>
+    <script src="../../Public/js/scriptswitcher.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<body>
+
+<div class=" absolute top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/3 z-50 rounded-lg p-6 popup  "
+    id="formmodif-<?=$studentlast['id_etu']?>">
+    <div class=" max-w-sm w-full h-14 my-3 mx-0 py-0 px-2 grid input-fieldform">
+        <span class="text-center text-base pt-5">Nom</span>
+        <input type="text" class=" bg-transparent outline-none border-none font-semibold text-lg firspageadd"
+            name="modif_nom_etu" value="<?=$studentlast['nom_etu']?>">
+    </div>
+
+    <div class=" max-w-sm w-full h-14 my-3 mx-0 py-0 px-2 grid input-fieldform">
+        <span class="text-center text-base pt-5">Prenom</span>
+        <input type="text" class=" bg-transparent outline-none border-none font-semibold text-lg firspageadd"
+            name="modif_prenom_etu" value="<?=$studentlast['prenom_etu']?>">
+    </div>
+
+    <div class=" max-w-sm w-full h-19 my-3 mx-0 py-0 px-1 grid input-fieldform">
+        <span class="text-center text-base py-2">Date de
+            Naissance</span>
+        <input type="date" class=" bg-transparent outline-none border-none font-semibold text-lg firspageadd pt-3"
+            name="modif_date_naissance_etu" value="<?=$studentlast['date_naiss_etu']?>">
+    </div>
+
+
+
+    <div class="max-w-sm w-full h-14 my-3 mx-0 py-0 px-2 grid input-fieldform " id="radioform">
+        <span class="text-center text-base pt-5">Genre</span>
+        <div class="flex justify-between mt-5 ml-3 ">
+            <label for="homme">
+                <input type="radio" name="modif_sexe_etu" id="modifhomme" value="Homme">
+                Homme
+            </label>
+            <label for="femme">
+                <input type="radio" name="modif_sexe_etu" id="modiffemme" value="Femme">
+                Femme
+            </label>
+        </div>
+    </div>
+
+    <div class="max-w-sm w-full h-14 my-3 mx-0 py-0 px-2 grid input-fieldform">
+        <span class="text-center text-base pt-5">Adresse</span>
+        <input type="text" class=" bg-transparent outline-none border-none font-semibold text-lg firspageadd"
+            name="modif_adresse_etu" value="<?=$studentlast['adresse_etu']?>" required>
+    </div>
+
+    <div class="max-w-sm w-full h-14 my-3 mx-0 py-0 px-2 grid input-fieldform">
+        <span class="text-center text-base pt-5">Email</span>
+        <input type="email" class=" bg-transparent outline-none border-none font-semibold text-lg firspageadd"
+            name="modif_email_etu" value="<?=$studentlast['email_etu']?>" required>
+    </div>
+
+    <div class="max-w-sm w-full h-14 my-3 mx-0 py-0 px-2 grid input-fieldform">
+        <span class="text-center text-base pt-5">Telephone</span>
+        <input type="tel" class=" bg-transparent outline-none border-none font-semibold text-lg firspageadd"
+            name="modif_tel_etu" value="<?=$studentlast['tel_etu']?>" required>
+    </div>
+    <div>
+        <button class="bg-green-400 p-3 w-48 rounded-xl text-white" type="submit"
+            name="modifstudent">Enregistrer</button>
+        <button class=" bg-red-600 p-3 w-48 rounded-xl text-white" onclick="nomodifstudent()"
+            type="button">Annuler</button>
+    </div>
+
+
+
+
+</body>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../../public/css/dist/style.css">
+    <link rel="stylesheet" href="../../public/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../public/css/fontawesome-free-6.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../../public/css/styleU.css">
+    <link rel="stylesheet" href="../../public/css/style-switcher.css">
+
+    <link rel="stylesheet" href="../../public/css/theme/bleu.css" class="alternate-style" title="bleu" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/emit.css" class="alternate-style" title="emit" enable>
+    <link rel="stylesheet" href="../../public/css/theme/orange.css" class="alternate-style" title="orange" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/rose.css" class="alternate-style" title="rose" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/rouge.css" class="alternate-style" title="rouge" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/vert.css" class="alternate-style" title="vert" disabled>
+
+    <script src="../../Public/js/app.js" defer></script>
+    <script src="../../Public/js/scriptswitcher.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<body>
+    <main class="mt-6">
+<section class="mainbody" id="tableaudebord">
+    <div class="grid my-0 mx-auto gap-7 tabcontent">
+        <div>
+            <h2 class="titlesection text-3xl font-semibold">Tableau de bord</h2>
+            <div class="grid gap-60 insights">
+                <div class="soldes">
+                    <i class="fa fa-group"></i>
+                    <div class="flex items-center justify-between midlle">
+                        <div class="left">
+                            <h3 class="text-white font-bold">SOLDE DE L'ECOLE D'INSCRIPTION </h3>
+                            <h2>
+                                <?php echo $nb_etudiants?>
+                            </h2>
+                            <h4 class="text-red-600">
+                                <?php echo $nb_etudiants?>
+                                </h2>
+                        </div>
+                        <div class="progress">
+                            <div class="number">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="countstudent">
+                    <i class="fa fa-group"></i>
+                    <div class="flex items-center justify-between midlle">
+                        <div class="left">
+                            <h3 class="text-white font-bold">ETUDIANT</h3>
+                            <h2>
+                                <?php echo $nb_etudiants?>
+                            </h2>
+                        </div>
+                        <div class="progress">
+                            <div class="number">
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">dans les 24h</small>
+                </div>
+                <div class="countstudentpaye">
+                    <i class="fa fa-group"></i>
+                    <div class="flex items-center justify-between midlle">
+                        <div class="left">
+                            <h3 class="text-white font-bold">ETUDIANT PAYEMENT TOTAL</h3>
+                            <h2>
+                                <?php echo $nb_etudiants?>
+                            </h2>
+                        </div>
+                        <div class=" progress">
+                            <canvas class="w-full h-full" id="graph1">
+
+                            </canvas>
+                            <script>
+                                var ctx = document.getElementById("graph1").getContext('2d');
+                                const data = {
+                                    datasets: [{
+
+                                        data: [40, 60],
+                                        backgroundColor: [
+                                            'rgb(255, 99, 132)',
+                                            'rgb(54, 162, 235)'
+                                        ],
+                                        hoverOffset: 4
+                                    }]
+                                };
+
+
+                                var option = {
+                                    responsive: true
+                                }
+                                const config = {
+                                    type: 'doughnut',
+                                    data: data,
+                                    option: option
+                                }
+
+
+                                var graph1 = new Chart(ctx, config);
+                            </script>
+
+                            <div class="absolute top-0 left-0 h-full w-full flex justify-center items-center number">
+                                <p class="mt-2 text-white">10%</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <small class="text-muted">Depuis les ouverture de l'inscription</small>
+                </div>
+            </div>
+            <div class="mt-8 mb-8 h-96">
+                <h2 class="text-xl font-semibold mb-3">Repartition des inscriptions</h2>
+                <canvas class="ml-28 w-full h-full" id='graph2'></canvas>
+                <script>
+                    var ctx = document.getElementById("graph2").getContext('2d');
+                    const datae = {
+                        labels: [' DA2I', 'RPM', 'AES'],
+                        datasets: [
+                            {
+                                label: 'Hommes',
+                                data: [50, 30, 70],
+                                backgroundColor: 'rgb(54, 162, 235)',
+                                hoverBackgroundColor: 'rgb(54, 162, 235)',
+                                stack: 'stack1'
+                            },
+                            {
+                                label: 'Femmes',
+                                data: [70, 40, 60],
+                                backgroundColor: 'rgb(255, 99, 132)',
+                                hoverBackgroundColor: 'rgb(255, 99, 132)',
+                                stack: 'stack1'
+                            }
+                        ]
+                    };
+                    var options = {
+                        responsive: true,
+                        scales: {
+                            x: {
+                                stacked: true
+                            },
+                            y: {
+                                stacked: true
+                            }
+                        }
+                    };
+                    const confige = {
+                        type: 'bar',
+                        data: datae,
+                        options: options
+                    };
+                    var graph2 = new Chart(ctx, confige);
+                </script>
+            </div>
+
+
+
+            <div class="mt-20 recent-order">
+                <h2 class="text-xl font-semibold mb-3">Inscription recente</h2>
+                <div class="etudiantlist">
+                    <table class="w-full">
+                        <thead>
+                            <tr>
+                                <th>
+                                    id
+                                </th>
+                                <th>
+                                    profil
+                                </th>
+                                <th>
+                                    sexe
+                                </th>
+                                <th>
+                                    Telephone
+                                </th>
+                                <th>
+                                    Parcour scolaire
+                                </th>
+                                <th>
+                                    Date d'inscription
+                                </th>
+                                <th>
+                                    Status
+                                </th>
+                                <th>
+                                    Action
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <div>
+                                        <img class="w-9 h-9 mr-2 align-middle" src="" alt="">
+                                        <p class="font-medium"><span class="font-semibold">Randria</span> <br>Ando</p>
+                                        <p class="font-extralight">Blitatous1@gmail.com</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    Femme
+                                </td>
+                                <td>
+                                    0343403434
+                                </td>
+                                <td>
+                                    Master 2
+                                    <br>
+                                    DA2I
+                                </td>
+                                <td>
+                                    01/01/2021
+                                </td>
+                                <td>
+                                    <strong class="status paye">Paye</strong>
+                                </td>
+                                <td>
+                                    <div class="flex space-x-2">
+                                        <div>
+                                            <button class="text-blue-600"><i class="fa fa-pen-square"></i></button>
+                                        </div>
+                                        <div>
+                                            <button class="text-red-600" type="button"><i
+                                                    class=" fa fa-trash"></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <div>
+                                        <img class="w-9 h-9 mr-2 align-middle" src="" alt="">
+                                        <p class="font-medium"><span class="font-semibold">Rasoamanana</span>
+                                            <br>Andrianina</p>
+                                        <p class="font-extralight">Blitatous1@gmail.com</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    Homme
+                                </td>
+                                <td>
+                                    0343403434
+                                </td>
+                                <td>
+                                    Master 2
+                                    <br>
+                                    DA2I
+                                </td>
+                                <td>
+                                    01/01/2021
+                                </td>
+                                <td>
+                                    <strong class="status nonpaye">En cours</strong>
+                                </td>
+                                <td>
+                                    <div class="flex space-x-2">
+                                        <div>
+                                            <button class="text-blue-600"><i class="fa fa-pen-square"></i></button>
+                                        </div>
+                                        <div>
+                                            <button class="text-red-600" type="button"><i
+                                                    class=" fa fa-trash"></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <a href="#">regarder tous</a>
+            </div>
+
+        </div>
+        <div class="w-10/12 mt-6 right">
+            <div>
+                <div class=" rounded-xl h-auto flex flex-col p-5 ">
+                    <div class="w-32 h-32 justify-center items-center  watch">
+                        <div class="timer" id="second">
+                        </div>
+                        <div class="timer" id="minute">
+                        </div>
+                        <div class="timer" id="hour">
+                        </div>
+                        <span style="--i:1;"><b>1</b></span>
+                        <span style="--i:2;"><b>2</b></span>
+                        <span style="--i:3;"><b>3</b></span>
+                        <span style="--i:4;"><b>4</b></span>
+                        <span style="--i:5;"><b>5</b></span>
+                        <span style="--i:6;"><b>6</b></span>
+                        <span style="--i:7;"><b>7</b></span>
+                        <span style="--i:8;"><b>8</b></span>
+                        <span style="--i:9;"><b>9</b></span>
+                        <span style="--i:10;"><b>10</b></span>
+                        <span style="--i:11;"><b>11</b></span>
+                        <span style="--i:12;"><b>12</b></span>
+                    </div>
+                    <script>
+                        let sc = document.querySelector("#second")
+                        let mn = document.querySelector("#minute")
+                        let hr = document.querySelector("#hour")
+                        setInterval(() => {
+                            let day = new Date();
+                            let hh = day.getHours() * 30;
+                            let mm = day.getMinutes() * 6;
+                            let ss = day.getSeconds() * 6;
+                            hr.style.transform = `rotateZ(${hh + (mm / 12)}deg)`;
+                            mn.style.transform = `rotateZ(${mm}deg)`;
+                            sc.style.transform = `rotateZ(${ss}deg)`;
+                        });
+                    </script>
+                    <div class="flex w-32 h-44 justify-center items-center  lg:w-64 lg:h-64 week">
+                        <ul class="flex gap-1">
+                            <li>L</li>
+                            <li>M</li>
+                            <li>M</li>
+                            <li>J</li>
+                            <li>V</li>
+                            <li>S</li>
+                            <li>D</li>
+                        </ul>
+                        <script>let date = new Date();
+                            let daynum = date.getDay();
+                            let day = date.getDate();
+                            let dayactive = document.querySelector(".week ul li:nth-child(" + daynum + ")");
+                            dayactive.classList.add("today")
+                            let h5 = document.createElement('h5');
+                            h5.innerHTML = day;
+                            dayactive.appendChild(h5);</script>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full task">
+                <h2 class=" text-xl font-semibold mb-3">
+                    Tache
+                </h2>
+                <div class="flex items-center gap-4 mb-3 py-6 px-7 itemonline">
+                    <div class="p-2 flex icon">
+                        <span class="text-white fa fa-tasks"></span>
+                    </div>
+                    <div class="flex  justify-between items-start m-0 w-full right">
+                        <div class="text">
+                            <p>Verifier les comptes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 mb-3 py-6 px-7 itemonline">
+                    <div class="p-2 flex icon">
+                        <span class="text-white fa fa-tasks"></span>
+                    </div>
+                    <div class="flex  justify-between items-start m-0 w-full right">
+                        <div class="text">
+                            <p>Verifier les etudiant en double filiere pour les bourses</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 mb-3 py-6 px-7 itemonline">
+                    <div class="p-2 flex icon">
+                        <span class="text-white fa fa-tasks"></span>
+                    </div>
+                    <div class="flex  justify-between items-start m-0 w-full right">
+                        <div class="text">
+                            <p>Verifier les impayers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 mb-3 py-6 px-7 addtask">
+                    <div class="p-2 flex icon">
+                        <h3><span>+</span> Ajouter une nouvelle tache</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    </main>
+ 
+
+
+
+
+
+
+</body>

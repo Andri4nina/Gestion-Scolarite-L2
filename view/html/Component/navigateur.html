@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../../public/css/dist/style.css">
+    <link rel="stylesheet" href="../../public/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../public/css/fontawesome-free-6.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="../../public/css/style-switcher.css">
+
+    <link rel="stylesheet" href="../../Public/css/theme/bleu.css" class="alternate-style" title="bleu" disabled>
+    <link rel="stylesheet" href="../../Public/css/theme/emit.css" class="alternate-style" title="emit" enable>
+    <link rel="stylesheet" href="../../public/css/theme/orange.css" class="alternate-style" title="orange" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/rose.css" class="alternate-style" title="rose" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/rouge.css" class="alternate-style" title="rouge" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/vert.css" class="alternate-style" title="vert" disabled>
+
+    <!-- app JS -->
+    <script src="../../Public/js/app.js" defer></script> 
+    <script src="../../Public/js/scriptswitcher.js" defer></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <body class="w-screen h-screen text-xs overflow-x-hidden select-none m-0 p-0 outline-0 appearance-none border-none no-underline list-none box-sizing: border-box">
+            <nav class="sidebar">
+                <header>
+                    <div class="py-2 imagelogo">
+                        <span class="image">
+                            <img src="public/img/emit logo.jpg" alt="logo">
+                        </span>
+                        <div class="txtheader navtxt">
+                            <span>
+                                Emit
+                            </span>
+                            <span>
+                                Scolarite
+                            </span>
+                        </div>
+                    </div>
+                    <div class="mt-5 menu_bar">
+                        <div class="text-center mt-5 mb-5"">
+                            <label for="" class="searchstyle"><input type="search" placeholder="..."> <i
+                                    class="fa fa-search"></i></label>
+                        </div>
+                        <div class="menu">
+                            <ul class=" menulist">
+                                <li class="nav_link  activemenu">
+                                    <a href="#tableaudebord">
+                                        <i class="fa fa-dashboard"></i>
+                                        <span class="navtxt">Tableau de bord</span>
+                                    </a>
+                                </li>
+                                <li class="nav_link">
+                                    <a href="#etudiant">
+                                        <i class="fa fa-users"></i>
+                                        <span class="navtxt">Étudiants</span>
+                                    </a>
+                                </li>
+                                <li class="nav_link">
+                                    <a href="#fraisscolarite">
+                                        <i class="fa fa-money"></i>
+                                        <span class="navtxt">Frais de scolarité</span>
+                                    </a>
+                                </li>
+                                <li class="nav_link">
+                                    <a href="#paiement">
+                                        <i class="fa fa-credit-card"></i>
+                                        <span class="navtxt">Paiements</span>
+                                    </a>
+                                </li>
+                                <li class="nav_link">
+                                    <a href="#professeur">
+                                        <i class="fa fa-user"></i>
+                                        <span class="navtxt">Professeurs</span>
+                                    </a>
+                                </li>
+                                <hr class="container">
+                                <li class="pl-3 mode">
+                                    <button class="flex day-night"><i class="fa fa-moon"></i><span
+                                            class="navtxt">Mode</span></button>
+            
+                                </li>
+                                <li class="nav_pallette " id="menupallette">
+                                    <a href="#theme" onclick="showpallette()">
+                                        <i class="fa fa-palette"></i>
+                                        <span class="navtxt">Theme</span>
+                                    </a><br>
+            
+                                    <div class="colors" id="activecolor">
+                                        <span class="emit" onclick="activestyle('emit')"></span>
+                                        <span class="bleu" onclick="activestyle('bleu')"></span>
+                                        <span class="orange" onclick="activestyle('orange')"></span>
+                                        <span class="rose" onclick="activestyle('rose')"></span>
+                                        <span class="rouge" onclick="activestyle('rouge')"></span>
+                                        <span class="vert" onclick="activestyle('vert')"></span>
+                                    </div>
+                                </li>
+                                <li class="nav_langue">
+                                    <a href="#parametre">
+                                        <i class="fa fa-language"></i>
+                                        <span class="navtxt">Langues</span>
+                                    </a>
+                                </li>
+                                <li class="nav_link">
+                                    <a href="#parametre">
+                                        <i class="fa fa-cog"></i>
+                                        <span class="navtxt">Parametres</span>
+                                    </a>
+                                </li>
+                                <hr>
+                                <li class=' bottom_content'>
+                                    <a href="#deco" onclick="decopopup()" id="decobtn">
+                                        <i class="fa fa-sign-out"></i><span class="navtxt">Deconnexion</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <br><br><br>
+                        </div>
+                        <i class="cursor-pointer px-1 py-1 fa fa-angle-right navshower" onclick="navhideshow()"></i>
+                    </div>
+                </header>
+            </nav>
+    </body>

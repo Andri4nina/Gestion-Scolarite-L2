@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../../public/css/dist/style.css">
+    <link rel="stylesheet" href="../../public/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../public/css/fontawesome-free-6.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../../public/css/styleU.css">
+    <link rel="stylesheet" href="../../public/css/style-switcher.css">
+
+    <link rel="stylesheet" href="../../public/css/theme/bleu.css" class="alternate-style" title="bleu" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/emit.css" class="alternate-style" title="emit" enable>
+    <link rel="stylesheet" href="../../public/css/theme/orange.css" class="alternate-style" title="orange" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/rose.css" class="alternate-style" title="rose" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/rouge.css" class="alternate-style" title="rouge" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/vert.css" class="alternate-style" title="vert" disabled>
+
+    <script src="../../Public/js/app.js" defer></script>
+    <script src="../../Public/js/scriptswitcher.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<body>
+
+    <section class="mainbody hidden" id="fraisscolarite">
+        <h2 class="titlesection">Frais de scolarite</h2>
+        <div class="grid grid-cols-3 gap-2">
+            <?php foreach($fraissco as $fraissco ): ?>
+            <div class=" bg-slate-200 rounded-lg shadow-lg w-11/12 p-4 mb-5 relative">
+                <i class="fa fa-pen absolute top-2 right-2 cursor-pointer" onclick="modiffrais()"></i>
+                <h2 class="text-xl font-bold mb-2">
+                    <?=$fraissco['Niveau']?>
+                </h2>
+                <h3 class="text-lg font-medium">
+                    <?=$fraissco['montant_total']?> <span> Ar</span>
+                </h3>
+                <form class="hidden">
+                    <div class="max-w-sm w-full h-14 my-3 mx-0 py-0 px-2 grid input-fieldform ">
+                        <span class="text-center text-base pt-5">Montant</span>
+                        <input type="text" class="bg-transparent outline-none border-none font-semibold text-lg firspageadd"
+                            name="Montant_total">
+                        <div>
+                            <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                                Enregistrer</button>
+                            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4
+                                        rounded">Annuler
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <?php endforeach;?>
+        </div>
+    
+    
+    
+    </section>
+    
+</body>

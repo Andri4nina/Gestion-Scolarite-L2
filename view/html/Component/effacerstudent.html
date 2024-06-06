@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../../public/css/dist/style.css">
+    <link rel="stylesheet" href="../../public/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../public/css/fontawesome-free-6.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../../public/css/popupstyle.css">
+    <link rel="stylesheet" href="../../public/css/style-switcher.css">
+
+    <link rel="stylesheet" href="../../Public/css/theme/bleu.css" class="alternate-style" title="bleu" disabled>
+    <link rel="stylesheet" href="../../Public/css/theme/emit.css" class="alternate-style" title="emit" enable>
+    <link rel="stylesheet" href="../../public/css/theme/orange.css" class="alternate-style" title="orange" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/rose.css" class="alternate-style" title="rose" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/rouge.css" class="alternate-style" title="rouge" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/vert.css" class="alternate-style" title="vert" disabled>
+
+    <!-- app JS -->
+    <script src="../../Public/js/app.js" defer></script>
+    <script src="../../Public/js/scriptswitcher.js" defer></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<body>
+    <div class=" popup" id="delconfirmed">
+        <form action="" method="POST">
+            <i class="fa fa-trash"></i>
+            <h2>Vous voulez vraiment supprimer cette etudiant et tous ce qui lui concerne?</h2>
+            <button class="w-32 bg-green-500 p-4 rounded-xl text-white">Confirmer</button>
+            <button class="w-32 bg-red-600 p-4 rounded-xl text-white" onclick="delstudentpopupclose()"
+                type="button">Annuler</button>
+        </form>
+    </div>
+</body>

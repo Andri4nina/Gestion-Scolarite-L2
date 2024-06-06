@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../../public/css/dist/style.css">
+    <link rel="stylesheet" href="../../public/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../public/css/fontawesome-free-6.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="../../public/css/style-switcher.css">
+
+    <link rel="stylesheet" href="../../public/css/theme/bleu.css" class="alternate-style" title="bleu" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/emit.css" class="alternate-style" title="emit" enable>
+    <link rel="stylesheet" href="../../public/css/theme/orange.css" class="alternate-style" title="orange" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/rose.css" class="alternate-style" title="rose" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/rouge.css" class="alternate-style" title="rouge" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/vert.css" class="alternate-style" title="vert" disabled>
+
+    <script src="../../Public/js/app.js" defer></script>
+    <script src="../../Public/js/scriptswitcher.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<body>
+    <div id="pageinscri" class="relative inscrietu">
+        <div class="my-0 mx-auto py-0  inscricontainer">
+            <div class="flex flex-row form-box">
+                <div class="relative p-8 progress">
+                    <div class="text-3xl font-extrabold title">
+                        <p><span>Inscrire</span> Etudiant</p>
+                    </div>
+                    <ul class="flex flex-col items-center justify-center  progress-steps">
+                        <li class="step active">
+                            <span>1</span>
+                            <p>Information personnel de l'etudiant</p>
+                        </li>
+                        <li class="step ">
+                            <span>2</span>
+                            <p>Contact ,Classe & Mention</p>
+                        </li>
+                        <li class="step ">
+                            <span>3</span>
+                            <p>Payement des frais de scolarite</p>
+                        </li>
+                    </ul>
+
+                </div>
+                <form action="">
+                    <div class="form-one form-step active">
+                        <h2>Information personnel de l'etudiant</h2>
+
+                        <div class="upload">
+                            <img src="../../Public/picture/emit logo.jpg " width="100" height="100" alt="pdp">
+                            <div class="round">
+                            <input type="file">
+                            <i class="text-white fa fa-camera" ></i>
+                            </div>
+                          
+                           
+                        </div>
+
+                        <div class=" max-w-sm w-full h-14 my-3 mx-0 py-0 px-2 grid input-fieldform">
+                            <span class="text-center text-base pt-5">Nom</span>
+                            <input type="text" class=" bg-transparent outline-none border-none font-semibold text-lg firspageadd"
+                                name="nom_etu">
+                        </div>
+
+                        <div class=" max-w-sm w-full h-14 my-3 mx-0 py-0 px-2 grid input-fieldform">
+                            <span class="text-center text-base pt-5">Prenom</span>
+                            <input type="text" class=" bg-transparent outline-none border-none font-semibold text-lg firspageadd"
+                                name="prenom_etu">
+                        </div>
+
+                        <div class="max-w-sm w-full h-19 my-3 mx-0 py-0 px-1 grid input-fieldform">
+                            <span class="text-center text-base py-2">Date de
+                                Naissance</span>
+                            <input type="date" class=" bg-transparent outline-none border-none font-semibold text-lg firspageadd pt-3"
+                                name="date_naissance_etu">
+                        </div>
+
+                        <div class="max-w-sm w-full h-14 my-3 mx-0 py-0 px-2 grid input-fieldform " id="radioform">
+                            <span class="text-center text-base pt-5">Genre</span>
+                            <div class="flex justify-between mt-5 ml-3 ">
+                                <label for="homme">
+                                    <input type="radio" name="sexe_etu" id="homme" value="Homme">
+                                    Homme
+                                </label>
+                                <label for="femme">
+                                    <input type="radio" name="sexe_etu" id="femme" value="Femme">
+                                    Femme
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="max-w-sm w-full h-14 my-3 mx-0 py-0 px-2 grid input-fieldform">
+                            <span class="text-center text-base pt-5">Adresse</span>
+                            <input type="text" class=" bg-transparent outline-none border-none font-semibold text-lg firspageadd"
+                                name="adresse_etu">
+                        </div>
+                        
+                      
+
+                          
+                    </div>
+                    <div class="form-two form-step">
+                        <h2>Contact ,Mention et classe</h2>
+                        <div class="max-w-sm w-full h-14 my-3 mx-0 py-0 px-2 grid input-fieldform">
+                            <span class="text-center text-base pt-5">Email</span>
+                            <input type="email" class=" bg-transparent outline-none border-none font-semibold text-lg firspageadd"
+                                name="email_etu">
+                        </div>
+                        
+                        <div class="max-w-sm w-full h-14 my-3 mx-0 py-0 px-2 grid input-fieldform">
+                            <span class="text-center text-base pt-5">Telephone</span>
+                            <input type="tel" class=" bg-transparent outline-none border-none font-semibold text-lg firspageadd" name="tel_etu">
+                        </div>
+
+                            <div class="block m-auto">
+                                <label for="">Mention</label> <br><select class="cursor-pointer" name="parcours_etu" >
+                                    <option class="cursor-pointer" name="">
+                                    </option>
+                                    <option class="cursor-pointer" name="" value="DA2I">DA2I
+                                    </option>
+                                    <option class="cursor-pointer" name="" value="RPM">RPM
+                                    </option>
+                                    <option class="cursor-pointer" name="" value="AES">AES
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="block m-auto">
+                                <label for="">Niveau <br> </label><select class="cursor-pointer" name="niveau_etu">
+                                    <option class="cursor-pointer" name="">
+                                    </option>
+                                    <option class="cursor-pointer" name="M2" value="Master 2">Master
+                                        2
+                                    </option>
+                                    <option class="cursor-pointer" name="M1" value="Master 1">Master
+                                        1
+                                    </option>
+                                    <option class="cursor-pointer" name="L3" value="License 3">
+                                        License 3
+                                    </option>
+                                    <option class="cursor-pointer" name="L2" value="License 2">
+                                        License 2
+                                    </option>
+                                    <option class="cursor-pointer" name="L1" value="License 1">
+                                        License 1
+                                    </option>
+                                </select>
+                            </div>
+                        
+                    </div>
+                
+                    <div class="form-three form-step">
+                        <h2>Payement</h2>
+                        <div class=" max-w-sm w-full h-19 my-3 mx-0 py-0 px-2 grid input-fieldform">
+                            <span class="text-center text-base py-3">Date
+                                d'inscription</span>
+                            <input type="date" class=" bg-transparent outline-none border-none font-semibold text-lg pt-3"
+                                name="date_inscription_etu"">
+                        </div>
+
+                        <div class="max-w-sm w-full h-19 my-3 mx-0 py-0 px-2 grid input-fieldform">
+                            <span class="text-center text-base py-3">Type de
+                                payement</span>
+                            <input type="text" class=" bg-transparent outline-none border-none font-semibold text-lg" name="type_paiement">
+                        </div>
+
+                        <div class="max-w-sm w-full h-14 my-3 mx-0 py-0 px-2 grid input-fieldform">
+                            <span class="text-center text-base pt-3">Montant
+                                total</span>
+                            <input type="text" class=" bg-transparent outline-none border-none font-semibold text-lg" name="montant_total">
+                        </div>
+                        
+                        <div class="max-w-sm w-full h-14 my-3 mx-0 py-0 px-2 grid input-fieldform">
+                            <span class="text-center text-base pt-5">Montant
+                                payer</span>
+                            <input type="text" class=" bg-transparent outline-none border-none font-semibold text-lg" name="montant_paye"
+                                >
+                        </div>
+                        
+                        <div class=" max-w-sm w-full h-19 my-3 mx-0 py-0 px-2 grid input-fieldform">
+                            <span class="text-center text-base py-3">Date de
+                                payement</span>
+                            <input type="date" class=" bg-transparent outline-none border-none font-semibold text-lg pt-3" name="date_paiement">
+                        </div>
+                        
+                        <div class=" max-w-sm w-full h-14 my-3 mx-0 py-0 px-2 grid input-fieldform">
+                            <span class="text-center text-base pt-5">Reste a
+                                payer</span>
+                            <input type="text" class=" bg-transparent outline-none border-none font-semibold text-lg" name="reste_a_payer">
+                        </div>
+                        <div class="max-w-sm w-full h-19 my-3 mx-0 py-0 px-2 grid input-fieldform">
+                            <span class="text-center text-base py-3">Date limite de
+                                payement</span>
+                            <input type="date" class=" bg-transparent outline-none border-none font-semibold text-lg pt-3"
+                                name="date_limite_paiement">
+                        </div>
+
+                        <div class=" max-w-sm w-full h-19 my-3 mx-0 py-0 px-2 grid input-fieldform">
+                            <span class="text-center text-base py-3">Statue</span>
+                            <input class=" bg-transparent outline-none border-none font-semibold text-lg" name="statut_paiement_etu">
+                        </div>
+                    </div>
+                    
+
+                    <div class="btngroup">
+                        <button type="button" class="btn-prev" disabled>Precedent</button>
+                        <button type="button" class="btn-next" >Suivant</button>
+                        <button type="button" class="btn-submit" >Enregistrer</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        <div class=" absolute left-3 top-3 cursor-pointer text-3xl" >
+            <i class="  fa fa-angle-left"></i>
+        </div>
+
+    </div>
+
+</body>

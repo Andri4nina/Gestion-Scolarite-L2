@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../../public/css/dist/style.css">
+    <link rel="stylesheet" href="../../public/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../public/css/fontawesome-free-6.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="../../public/css/style-switcher.css">
+
+    <link rel="stylesheet" href="../../public/css/theme/bleu.css" class="alternate-style" title="bleu" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/emit.css" class="alternate-style" title="emit" enable>
+    <link rel="stylesheet" href="../../public/css/theme/orange.css" class="alternate-style" title="orange" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/rose.css" class="alternate-style" title="rose" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/rouge.css" class="alternate-style" title="rouge" disabled>
+    <link rel="stylesheet" href="../../public/css/theme/vert.css" class="alternate-style" title="vert" disabled>
+
+    <script src="../../Public/js/app.js" defer></script>
+    <script src="../../Public/js/scriptswitcher.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<body>
+<section class="mainbody  " id="etudiant">
+    <h2 class="titlesection text-3xl font-semibold">Etudiant</h2>
+    <div id="listetu">
+        <div class="w-full groupsearch">
+            <div
+                class="mt-4 grid grid-cols-1 justify-center items-center  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 etudiantsearch">
+                <div class="text-center mt-5 mb-5 ">
+                    <label for="" class="searchstyle"><input type="search" placeholder="..."> <i
+                            class="fa fa-search"></i></label>
+                </div>
+                <div class="flex justify-center items-center">
+                    <label for="" class="block">Niveau</label>
+                    <select name="select" id="" class="w-4/5 h-9">
+                        <option name=""></option>
+                        <option name="M2">Master 2</option>
+                        <option name="M1">Master 1</option>
+                        <option name="L3">License 3</option>
+                        <option name="L2">License 2</option>
+                        <option name="L1">License 1</option>
+                    </select>
+                </div>
+                <div class="flex justify-center items-center">
+                    <label for="" class="block">Classe</label>
+                    <select name="select" id="" class="w-4/5 h-9">
+                        <option name=""></option>
+                        <option name="">DA2I</option>
+                        <option name="">RPM</option>
+                        <option name="">AES</option>
+                    </select>
+                </div>
+                <div class="block m-auto rounded-xl">
+                    <button class="p-2 bg-green-500 text-white" onclick="addstudent()">
+                        <i class="fa fa-plus"></i> Ajouter
+                    </button>
+                </div>
+            </div>
+        </div>    
+        <div class="etudiantlist">
+            <table class="w-full">
+                <thead>
+                    <tr>
+                        <th>
+                            id
+                        </th>
+                        <th>
+                            profil
+                        </th>
+                        <th>
+                            sexe
+                        </th>
+                        <th>
+                            Telephone
+                        </th>
+                        <th>
+                            Parcour scolaire
+                        </th>
+                        <th>
+                            Date d'inscription
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <div>
+                                <img class="w-9 h-9 mr-2 align-middle" src="" alt="">
+                                <p class="font-medium"><span class="font-semibold">Randria</span> <br>Ando</p>
+                                <p class="font-extralight">Blitatous1@gmail.com</p>
+                            </div>
+                        </td>
+                        <td>
+                            Femme
+                        </td>
+                        <td>
+                            0343403434
+                        </td>
+                        <td>
+                            Master 2
+                            <br>
+                            DA2I
+                        </td>
+                        <td>
+                            01/01/2021
+                        </td>
+                        <td>
+                            <strong class="status paye">Paye</strong>
+                        </td>
+                        <td>
+                            <div class="flex space-x-2">
+                                <div>
+                                    <button class="text-blue-600"><i class="fa fa-pen-square"></i></button>
+                                </div>
+                                <div>
+                                    <button class="text-red-600" type="button"><i class=" fa fa-trash"></i></button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <div>
+                                <img class="w-9 h-9 mr-2 align-middle" src="" alt="">
+                                <p class="font-medium"><span class="font-semibold">Rasoamanana</span> <br>Andrianina</p>
+                                <p class="font-extralight">Blitatous1@gmail.com</p>
+                            </div>
+                        </td>
+                        <td>
+                            Homme
+                        </td>
+                        <td>
+                            0343403434
+                        </td>
+                        <td>
+                            Master 2
+                            <br>
+                            DA2I
+                        </td>
+                        <td>
+                            01/01/2021
+                        </td>
+                        <td>
+                            <strong class="status nonpaye">En cours</strong>
+                        </td>
+                        <td>
+                            <div class="flex space-x-2">
+                                <div>
+                                    <button class="text-blue-600"><i class="fa fa-pen-square"></i></button>
+                                </div>
+                                <div>
+                                    <button class="text-red-600" type="button"><i class=" fa fa-trash"></i></button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+</section>
+        
+  
+</body>
